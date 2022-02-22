@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box-shodow {
+  box-shadow: 0 0 5px 0px #bbb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-style {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-img {
+  width: 30px;
+}
+
+.drop-img {
+  width: 15px;
+  margin-left: 10px;
+}
+
+.first {
+  padding-left: 0 !important;
+}
+
+.bg-1 {
+  background-color: #F1F3F6;
+}
+
+.categories-nav {
+  left: 0;
+  top: 47px;
+  display: none;
+  transition: all 2s;
+}
+
+.categories-nav-pa:hover .categories-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: all 2s;
+}
+
+
+/* Shops component here */
+
+.card-img-cust {
+  max-height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.card-img-cust>img {
+  width: 100%;
+  height: auto;
+}
+
+/* CSS for Admin panel */
+
+.headericons>div {
+  width: 30px;
+}
+
+.profile-icon {
+  width: 50px;
+}
+
+
+
+/* css for itemcard */
+
+.item-card-img {
+  max-height: 300px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* css for Itemdetails */
+
+.item-small-img {
+  height: 4.5rem;
+}
+
+.item-img-wrapper {
+  height: 21rem;
+  overflow: hidden;
+
+}
+
+/* 
+.item-img-wrapper {
+  object-fit: contain;
+} */
+
+/* css for login page */
+h-100vh {
+  height: 100vh;
+}
+
+
+/* login and signup page css */
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.auth-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.auth-inner {
+  width: 450px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all .3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-wrapper .form-control:focus {
+  border-color: #167bff;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
 }
