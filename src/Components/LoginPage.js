@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +8,8 @@ const LoginPage = () =>
 {
     let [email, setEmail] = useState('')
     let [password, setPassword] = useState('')
+
+    let [invalidUser, setInvalidUser] = useState('')
 
     const login = (e) =>
     {
@@ -20,12 +22,21 @@ const LoginPage = () =>
                 if (res.data.token)
                 {
                     window.localStorage.setItem('token', res.data.token)
+                    setInvalidUser("")
+                } else
+                {
+                    setInvalidUser("Invalid Email address or password")
                 }
             }).catch(err =>
             {
                 console.log(err)
             });
     }
+
+    useEffect(() =>
+    {
+
+    }, [])
 
     return (
         <section className="vh-100 d-flex">
@@ -77,6 +88,7 @@ const LoginPage = () =>
                                 </div>
                                 <a href="#!" className="text-body">Forgot password?</a>
                             </div>
+                            <p className='small fw-bold'>{invalidUser}</p>
 
                             <div className="text-center text-lg-start mt-4 pt-2">
                                 <button onClick={login} type="button" className="btn btn-primary btn-lg btn-style"

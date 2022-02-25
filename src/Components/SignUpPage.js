@@ -114,7 +114,7 @@ const SignUpPage = () =>
 
                                             <div className='d-flex justify-content-center mb-3'>
                                                 <p className="small fw-bold mt-2 pt-1 mb-0 text -center"> <Link to="/login"
-                                                    className="link-danger">Already have an accunt </Link></p>
+                                                    className="link-danger">Already have an account </Link></p>
                                             </div>
 
                                             <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
