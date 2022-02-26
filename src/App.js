@@ -4,12 +4,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import CustomerLayout from './Components/Customer/CustomerLayout';
 import SellerLayout from './Components/Seller/SellerLayout';
-import AdminLayout from './Components/Admin/AdminLayout';
+import AdminHome from './Components/Admin/AdminHome';
 import ItemPage from './Components/Customer/ItemPage';
 import LoginPage from './Components/LoginPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUpPage from './Components/SignUpPage';
+import AdminShops from './Components/Admin/AdminShops';
+import AdminUsers from './Components/Admin/AdminUsers';
+import AdminProducts from './Components/Admin/AdminProducts';
+
 const ShopsDetail = [
 
   {
@@ -98,9 +102,15 @@ function App()
               <Route path="/" element={<CustomerLayout />} />
               <Route path="/itempage" element={<ItemPage />} />
               <Route path="/seller" element={<SellerLayout />} />
-              <Route path="/admin" element={<AdminLayout />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignUpPage />} />
+
+              {/* routes for admin panel */}
+
+              <Route path="/admin" element={<AdminHome />} />
+              <Route path="/adminShops" element={<AdminShops />} />
+              <Route path="/adminUsers" element={<AdminUsers />} />
+              <Route path="/adminProducts" element={<AdminProducts />} />
 
 
             </Routes>

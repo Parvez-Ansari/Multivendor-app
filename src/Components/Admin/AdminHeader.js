@@ -8,9 +8,10 @@ import bell from '../../Image/bell.png'
 export default function AdminHeader()
 {
     const [search, setSearch] = useState("")
+
     return (
         <>
-            <div className='container-fluid border-bottom'>
+            <div className='container-fluid border-bottom fixed-top z-index bg-white'>
                 <div className='row'>
                     <div className='col-12'>
                         <div className='wrapper d-flex justify-content-between align-items-center py-3 '>
@@ -20,8 +21,8 @@ export default function AdminHeader()
 
                             <div className='w-25 d-flex'>
                                 <form className='d-flex border align-self-center rounded overflow-hidden'>
-                                    <input value={search}
-                                        className='border-0 px-3'
+                                    <input value={search} 
+                                        className='border-0 px-3 bg-white'
                                         type='text'
                                         placeholder='Search for shops'
                                         onChange={(e) =>
