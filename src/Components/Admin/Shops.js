@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 const Shops = () =>
 {
@@ -8,12 +9,18 @@ const Shops = () =>
     const [address, setAddress] = useState('')
     const [contact, setContact] = useState('')
     const [category, setCategory] = useState('')
+    const [shopImage, setShopImage] = useState(null)
+
+    useEffect(() =>
+    {
+        console.log(shopImage)
+    }, [shopImage])
 
     return (
         <>
             <h5 className='mt-2'>Add Merchant</h5>
 
-            <table class="table table-bordered">
+            <table className="table table-bordered">
                 <thead>
                     <tr>
                         <th>Shop Image</th>
@@ -27,7 +34,14 @@ const Shops = () =>
                 <tbody>
                     <tr>
                         <td className='p-0'>
-                            <input className='w-100' type='file' placeholder='' />
+                            <input className='w-100 '
+                                type='file'
+                                onChange={(e) =>
+                                {
+                                    setShopImage(e.target.files[0])
+                                    console.log(e.target.files[0], shopImage)
+                                }}
+                            />
                         </td>
                         <td className='p-0'>
                             <input className='w-100 align-self-stratch p-2 border-0 inp-active'
@@ -88,7 +102,13 @@ const Shops = () =>
                 </tbody>
             </table>
             <div className='d-flex justify-content-center'>
-                <button className='btn btn-primary'>Add Shop</button>
+                <button className='btn btn-primary'
+                    onClick={(e) =>
+                    {
+                        const shopImg = new FormData()
+                        shopImg.append('ImageShop', shopImage, shopImage.name)
+                    }}
+                >Add Shop</button>
             </div>
 
         </>
